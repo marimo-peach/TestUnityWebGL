@@ -10,18 +10,18 @@
     <script src="Build/UnityLoader.js"></script>
     <script>
       var unityInstance = null;
-      var playIcon = document.getElementById("play-icon");
-      playIcon.onclick = function() {
+      function clickPlay() {
         unityInstance = UnityLoader.instantiate("unityContainer", "Build/WebTestProject.json", {onProgress: UnityProgress});
         document.querySelector(".webgl-content .footer .fullscreen").style.display = "";
-        playIcon.remove();
-      };
+        this.remove();
+      }
     </script>
   </head>
   <body>
     <div class="webgl-content">
-      <div id="unityContainer" style="width: 960px; height: 600px"></div>
-      <div id="play-icon"></div>
+      <div id="unityContainer" style="width: 960px; height: 600px">
+        <input type="image" onclick="clickPlay();" src="TemplateData/play_icon.png">
+      </div>
       <div class="footer">
         <div class="webgl-logo"></div>
         <div class="fullscreen" onclick="unityInstance.SetFullscreen(1)" style="display: none;"></div>
