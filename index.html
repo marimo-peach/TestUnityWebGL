@@ -13,7 +13,7 @@
       function clickPlay() {
         unityInstance = UnityLoader.instantiate("unityContainer", "Build/WebTestProject.json", {onProgress: UnityProgress});
         document.querySelector(".webgl-content .footer .fullscreen").style.display = "";
-        this.remove();
+        document.querySelector('#unityContainer > input[type="image"]').remove();
       }
     </script>
   </head>
