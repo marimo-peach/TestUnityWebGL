@@ -13,8 +13,8 @@
       function clickPlay() {
         unityInstance = UnityLoader.instantiate("unityContainer", "Build/WebTestProject.json", {onProgress: UnityProgress});
         document.querySelector(".webgl-content .footer .fullscreen").style.display = "";
-        var playIcon = document.getElementById('play-icon');
-        document.getElementById('play-icon').remove();
+        var playIcon = document.querySelector("#play-icon");
+        playIcon.remove();
       }
     </script>
   </head>
