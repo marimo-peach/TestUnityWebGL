@@ -13,14 +13,14 @@
       function clickPlay() {
         unityInstance = UnityLoader.instantiate("unityContainer", "Build/WebTestProject.json", {onProgress: UnityProgress});
         document.querySelector(".webgl-content .footer .fullscreen").style.display = "";
-        document.querySelector('#unityContainer > input[type="image"]').remove();
+        document.getElementById('play-icon').remove();
       }
     </script>
   </head>
   <body>
     <div class="webgl-content">
       <div id="unityContainer" style="width: 960px; height: 600px">
-        <input type="image" onclick="clickPlay();" src="TemplateData/play_icon.png">
+        <input type="image" id="play-icon" onclick="clickPlay();" src="TemplateData/play_icon.png">
       </div>
       <div class="footer">
         <div class="webgl-logo"></div>
